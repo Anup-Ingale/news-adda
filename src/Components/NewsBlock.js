@@ -5,7 +5,7 @@ export class NewsBlock extends Component {
         let {title, description, imageUrl, newsUrl} = this.props;
         return (
             <div className="container p-2 my-3">
-                <div className="card" style={{width: "18rem"}}>
+                <div className="card">
                     <img src={!imageUrl ? "https://techcrunch.com/wp-content/uploads/2021/09/Microsoft_Clipchamp.jpeg?w=764":imageUrl} className="card-img-center" alt="news_image"/>
                     <div className="card-body">
                         <h5 className="card-title">{title}</h5>
