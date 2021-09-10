@@ -12,7 +12,7 @@ class App extends Component {
         <Navbar />
       
           <Switch>
-            <Route exact path="/general">
+            <Route exact path="/">
               <News key="general" pageSize={6} country="in" category="general" />
             </Route>
             <Route exact path="/science">

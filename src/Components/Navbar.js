@@ -7,7 +7,7 @@ class componentName extends Component {
             <>
                 <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                     <div className="container-fluid">
-                        <Link className="navbar-brand" to="/general">
+                        <Link className="navbar-brand" to="/">
                             News Duniya
                         </Link>
                         <button
@@ -27,15 +27,10 @@ class componentName extends Component {
                         >
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li className="nav-item">
-                                    <Link className="nav-link active" aria-current="page" to="/general">
+                                    <Link className="nav-link active" aria-current="page" to="/">
                                         Home
                                     </Link>
                                 </li>
-                                {/* <li className="nav-item">
-                                    <Link className="nav-link" to="/general">
-                                        About Us
-                                    </Link>
-                                </li> */}
                                 <li className="nav-item dropdown">
                                     <Link
                                         className="nav-link dropdown-toggle"

@@ -10,18 +10,24 @@ export class News extends Component {
     category : 'general',
     
   }
+ 
   static propTypes ={
     country : PropTypes.string,
     pageSize : PropTypes.number,
     category : PropTypes.string,
   }
-  constructor() {
-    super();
+
+  capitalizeFirst = (string) =>{
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+  constructor(props) {
+    super(props);
     this.state = {
       articles: [],
-      loading: false,
-      page: 1,
+      loading : false,
+      page    : 1,
     };
+    document.title = `${this.capitalizeFirst(this.props.category)} - News Duniya ` ;
   }
 
   Prev = async () => {
@@ -55,6 +61,7 @@ export class News extends Component {
         page: this.state.page + 1,
         loading : false
       });
+      
     }
   };
 
@@ -75,7 +82,7 @@ export class News extends Component {
   render() {
     return (
       <div className="container">
-        <h2 className="text-center my-3">News Duniya - Top News </h2>
+        <h2 className="text-center my-3">News Duniya - Top  {this.capitalizeFirst(this.props.category)} News </h2>
         {this.state.loading && <Spinner/>}
         <div className="row">
           {!this.state.loading && this.state.articles.map((element) => {
